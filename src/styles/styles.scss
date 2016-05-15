@@ -1,11 +1,45 @@
 @import url(https://fonts.googleapis.com/css?family=Karla);
+@import url(https://fonts.googleapis.com/css?family=Hind:400,700);
+
+@font-face {
+	font-family: 'myFont';
+	src: 	url('Pe-icon-7-stroke.woff') format('woff');
+			// url('../assets/fonts/Pe-icon-7-stroke.svg') format('svg'),
+			// url('../assets/fonts/Pe-icon-7-stroke.ttf') format('truetype'),
+			// url('../assets/fonts/Pe-icon-7-stroke.eot') format('embedded-opentype');
+	font-weight: normal;
+    font-style: normal;
+}
 
 $font-size: 11px;
 $pri-color: black;
 $sec-color: black;
 $tert-color: black;
 
+$name-font: 'Hind';
+
 html, body {
 	width:794px;
-	height:1122px
+	height:1122px;
+	font-family: 'Karla';
+	margin: 0 auto;
+	border: 1px solid rgba(214, 214, 214, 0.2);
+}
+
+[class^='pe-'] {
+	font-family: 'myFont';
+}
+
+.pe {
+	font-family: 'myFont';
+}
+
+.resume {
+	margin: 1.5em 1.5em;
+}
+
+.name {
+	font-family: $name-font;
+	font-weight: 700;
+	font-size: 2.2em;
 }

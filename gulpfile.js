@@ -6,7 +6,7 @@ const del = require('del')
 
 let paths = {
 	styles:  {
-		entry: './styles/**/*.scss',
+		entry: './src/styles/**/*.scss',
 		out: './public/styles/'
 	},
 	html: {
@@ -21,9 +21,13 @@ gulp.task('sass', ()=>{
 		.pipe(gulp.dest(paths.styles.out))
 })
 
-gulp.task('sass:watch', ()=>{
-	gulp.watch(paths.styles.entry)
+gulp.task('watch', ()=>{
+	gulp.watch([paths.styles.entry, paths.html.entry], ['sass', 'copy'])
 })
+
+// gulp.task('sass:watch', ()=>{
+// 	gulp.watch(paths.styles.entry)
+// })
 
 gulp.task('copy', ()=>{
 	gulp.src(paths.html.entry).pipe(gulp.dest(paths.html.out))
@@ -36,6 +40,6 @@ gulp.task('clean', ()=> {
 })
 
 gulp.task('default', ['clean', 'copy'], ()=>{
-	gulp.start('sass', 'sass:watch')
+	gulp.start('sass', 'watch')
 })
 
