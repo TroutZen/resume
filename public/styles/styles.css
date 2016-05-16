@@ -12,33 +12,26 @@ html, body {
   margin: 0 auto;
   border: 1px solid rgba(214, 214, 214, 0.2); }
 
-.pe {
-  font-family: 'Pixeden';
-  font-weight: normal;
-  font-style: normal; }
-
-i.pe {
-  position: relative;
-  top: 3px; }
-
-.pe-7s-global:before {
-  content: '\e64f'; }
-
-.pe-7s-mail:before {
-  content: '\e639'; }
-
 .resume {
-  margin: 1.5em 1.5em; }
+  margin: 1.5em 1.5em;
+  height: 95%; }
+
+.col, .col-1, .col-2 {
+  height: 100%; }
+
+.col-1 {
+  width: 35%;
+  border-right: 1px solid rgba(166, 173, 182, 0.2); }
+
+.col-2 {
+  width: 65%; }
 
 .business-card {
-  width: 50%;
   border-radius: 3px; }
 
 .business-card-content {
-  padding-left: 30px;
-  padding-right: 10px;
-  padding-top: 40px;
-  padding-bottom: 40px; }
+  padding-top: 20px;
+  padding-left: 10px; }
   .business-card-content i {
     color: #39d2c9;
     min-width: 17px; }

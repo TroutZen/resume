@@ -12,6 +12,7 @@
 			url('/assets/fonts/pixeden/Pe-icon-7-stroke.eot') format('embedded-opentype');
 }
 
+
 $font-size: 11px;
 $primary-color: rgb(36, 118, 233);
 $primary-dark: #2a2e33;
@@ -30,41 +31,35 @@ html, body {
 	border: 1px solid rgba(214, 214, 214, 0.2);
 }
 
-.pe {
-	font-family: 'Pixeden';
-	font-weight: normal;
-    font-style: normal;
-}
-
-i.pe {
-	position: relative;
-	top: 3px;
-}
-
-.pe-7s-global:before {
-	content: '\e64f';
-}
-
-.pe-7s-mail:before {
-	content: '\e639'
-}
-
 .resume {
 	margin: 1.5em 1.5em;
+	height: 95%;
+}
+
+.col {
+	height: 100%;
+}
+
+.col-1 {
+	@extend .col;
+	width: 35%;
+	border-right: 1px solid rgba(lighten($primary-dark, 50%), 0.2);
+}
+
+.col-2 {
+	@extend .col;
+	width: 65%;
 }
 
 .business-card {
 	// border: 1px solid transparent;
-	width: 50%;
 	border-radius: 3px;
 	// background: linear-gradient(to top right, rgba(36, 118, 233, 0.5) 50%, rgba(36, 118, 233, 0.5) 50%);
 }
 
 .business-card-content {
-	padding-left: 30px;
-	padding-right: 10px;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-left: 10px;
 
 	i {
 		color: $secondary-color;
