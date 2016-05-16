@@ -12,34 +12,38 @@ let paths = {
 	html: {
 		entry: './src/index.html',
 		out: './public/'
+	},
+	nm: {
+		entry: './node_modules/**/*',
+		out: './public/node_modules'
 	}
 }
 
 gulp.task('sass', ()=>{
 	return gulp.src(paths.styles.entry)
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({includePaths: ['src/styles/fonts/']}).on('error', sass.logError))
 		.pipe(gulp.dest(paths.styles.out))
 })
 
 gulp.task('watch', ()=>{
-	gulp.watch([paths.styles.entry, paths.html.entry], ['sass', 'copy'])
+	gulp.watch([paths.styles.entry, paths.html.entry], ['sass', 'copy:html'])
 })
 
-// gulp.task('sass:watch', ()=>{
-// 	gulp.watch(paths.styles.entry)
-// })
-
-gulp.task('copy', ()=>{
+gulp.task('copy:html', ()=>{
 	gulp.src(paths.html.entry).pipe(gulp.dest(paths.html.out))
+})
+
+gulp.task('copy:nm', ()=>{
+	gulp.src(paths.nm.entry).pipe(gulp.dest(paths.nm.out))
 })
 
 gulp.task('clean', ()=> {
 	return del([
-			'./public/styles/*'
+			'./public/**/*'
 		])
 })
 
-gulp.task('default', ['clean', 'copy'], ()=>{
+gulp.task('default', ['clean', 'copy:html', 'copy:nm'], ()=>{
 	gulp.start('sass', 'watch')
 })
 

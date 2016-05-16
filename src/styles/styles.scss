@@ -1,22 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Karla);
+// @import 'fonts/pixeden';
+
+@import url(https://fonts.googleapis.com/css?family=Karla:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Hind:400,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,700,600,900,800);
 
 @font-face {
-	font-family: 'myFont';
-	src: 	url('Pe-icon-7-stroke.woff') format('woff');
-			// url('../assets/fonts/Pe-icon-7-stroke.svg') format('svg'),
-			// url('../assets/fonts/Pe-icon-7-stroke.ttf') format('truetype'),
-			// url('../assets/fonts/Pe-icon-7-stroke.eot') format('embedded-opentype');
-	font-weight: normal;
-    font-style: normal;
+	font-family: 'Pixeden';
+	src: 	url('/assets/fonts/pixeden/Pe-icon-7-stroke.woff') format('woff'),
+			url('/assets/fonts/pixeden/Pe-icon-7-stroke.svg') format('svg'),
+			url('/assets/fonts/pixeden/Pe-icon-7-stroke.ttf') format('truetype'),
+			url('/assets/fonts/pixeden/Pe-icon-7-stroke.eot') format('embedded-opentype');
 }
 
 $font-size: 11px;
-$pri-color: black;
-$sec-color: black;
-$tert-color: black;
+$primary-color: rgb(36, 118, 233);
+$primary-dark: #2a2e33;
 
+$secondary-color: #39d2c9;
+
+$tert-color: black;
 $name-font: 'Hind';
+$primary-color-light: lighten($primary-color, 20%);
 
 html, body {
 	width:794px;
@@ -26,20 +30,60 @@ html, body {
 	border: 1px solid rgba(214, 214, 214, 0.2);
 }
 
-[class^='pe-'] {
-	font-family: 'myFont';
+.pe {
+	font-family: 'Pixeden';
+	font-weight: normal;
+    font-style: normal;
 }
 
-.pe {
-	font-family: 'myFont';
+i.pe {
+	position: relative;
+	top: 3px;
+}
+
+.pe-7s-global:before {
+	content: '\e64f';
+}
+
+.pe-7s-mail:before {
+	content: '\e639'
 }
 
 .resume {
 	margin: 1.5em 1.5em;
 }
 
+.business-card {
+	// border: 1px solid transparent;
+	width: 50%;
+	border-radius: 3px;
+	// background: linear-gradient(to top right, rgba(36, 118, 233, 0.5) 50%, rgba(36, 118, 233, 0.5) 50%);
+}
+
+.business-card-content {
+	padding-left: 30px;
+	padding-right: 10px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	i {
+		color: $secondary-color;
+		min-width: 17px;
+	}
+
+}
+
 .name {
-	font-family: $name-font;
+	color: $primary-dark;
+	// text-shadow: 1px 3px 4px rgba(0,0,0,0.1);
 	font-weight: 700;
 	font-size: 2.2em;
+}
+
+.contact-info {
+	color: lighten($primary-dark, 30%);
+	font-family: 'Work Sans';
+	font-weight: 200;
+	padding-left: 5px;
+	font-size: 0.8em;
 }
