@@ -3,6 +3,7 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const del = require('del')
+const runSequence = require('run-sequence')
 
 let paths = {
 	styles:  {
@@ -39,11 +40,13 @@ gulp.task('copy:nm', ()=>{
 
 gulp.task('clean', ()=> {
 	return del([
-			'./public/**/*'
+			'./public/**/*',
+			'./public/node_modules/**/*'
 		])
 })
 
-gulp.task('default', ['clean', 'copy:html', 'copy:nm'], ()=>{
-	gulp.start('sass', 'watch')
+gulp.task('default', ()=>{
+	runSequence('clean', ['copy:html', 'copy:nm', 'sass'], 'watch')
+	// gulp.start('sass', 'watch')
 })
 
