@@ -6,12 +6,11 @@
 
 
 $font-size: 11px;
-$primary-color: rgba(36, 118, 233, 1);
-$primary-dark: #2a2e33;
-$secondary-color: rgba(57,210,201 ,1);
+$primary-color: #2781A2;
+$primary-dark: rgba(0,0,0,0.87);
+$secondary-color: #2781A2;
 $tert-color: black;
 $name-font: 'Hind';
-$primary-color-light: lighten($primary-color, 20%);
 $heroku: #7e5ea2;
 
 html, body {
@@ -58,7 +57,7 @@ ul {
 [class*='col-'] {
     float: left;
     min-height: 1px;
-}	
+}
 
 .col {
 	height: 100%;
@@ -77,32 +76,28 @@ ul {
 }
 
 .business-card {
-	// border: 1px solid transparent;
 	border-radius: 3px;
-	// background: linear-gradient(to top right, rgba(36, 118, 233, 0.5) 50%, rgba(36, 118, 233, 0.5) 50%);
 }
 
 .business-card-content {
-	padding-top: 20px;
+	padding-top: 13px;
 	padding-left: 10px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 
 	i {
 		color: $secondary-color;
 		min-width: 17px;
 	}
-		
+
 }
 
 .name {
-	// color: black;
-	// text-shadow: 1px 3px 4px rgba(0,0,0,0.1);
 	font-weight: 700;
 	font-size: 2.2em;
 }
 
 .contact-info {
-	color: lighten($primary-dark, 30%);
+	color: rgba(0,0,0,0.54);
 	font-weight: 200;
 	padding-left: 5px;
 	font-size: 0.8em;
@@ -129,7 +124,7 @@ ul {
 	border: 1px solid #d5d4d3;
 	background-color: rgba(253, 225, 162, 0.33);
 	color: black;
-}	
+}
 
 .interests {
 	font-size: 0.95em;
@@ -183,10 +178,6 @@ ul {
 	display: inline-block;
 }
 
-.company-section {
-	// margin-bottom: 2em;
-}
-
 .position {
 	@extend .contact-info;
 	font-size: 1em;
@@ -205,16 +196,15 @@ ul {
 .section-header-bubble {
 	@extend .section-header;
 	display: block;
-	background-color: rgba($secondary-color, 0.25);
+	background-color: $primary-color;
 	padding: 0 0.5em;
 	border-radius: 3px;
-	border: 1px solid rgba($secondary-color, 0.2);
+	border: 1px solid $primary-color;
 	line-height: 1.1;
 
 	&.small {
 		font-size: 1.2em;
 	}
-
 }
 
 .professional-experience {
@@ -241,4 +231,14 @@ ul {
 	}
 }
 
+.white {
+	color: white;
+}
 
+.instawork-logo {
+	font-family: 'HelveticaNeue';
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: -0.4px;
+	color: #4eaacc;
+}

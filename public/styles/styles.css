@@ -5,7 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700italic,700,400italic);
 html, body {
   width: 794px;
-  color: #2a2e33;
+  color: rgba(0, 0, 0, 0.87);
   height: 1122px;
   font-family: 'Source Sans Pro';
   margin: 0 auto; }
@@ -44,7 +44,7 @@ ul {
 
 .col-1 {
   width: 30%;
-  border-right: 1px solid rgba(166, 173, 182, 0.2); }
+  border-right: 1px solid rgba(128, 128, 128, 0.2); }
 
 .col-2 {
   width: 64%;
@@ -54,11 +54,11 @@ ul {
   border-radius: 3px; }
 
 .business-card-content {
-  padding-top: 20px;
+  padding-top: 13px;
   padding-left: 10px;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
   .business-card-content i {
-    color: #39d2c9;
+    color: #2781A2;
     min-width: 17px; }
 
 .name {
@@ -66,7 +66,7 @@ ul {
   font-size: 2.2em; }
 
 .contact-info, .description, .company-description, .position {
-  color: #6f7a87;
+  color: rgba(0, 0, 0, 0.54);
   font-weight: 200;
   padding-left: 5px;
   font-size: 0.8em; }
@@ -101,7 +101,7 @@ ul {
   color: #1471b4; }
 
 .section-header, .section-header-bubble {
-  border-bottom: 1px solid #39d2c9;
+  border-bottom: 1px solid #2781A2;
   display: inline-block;
   margin-bottom: 10px; }
 
@@ -131,10 +131,10 @@ ul {
 
 .section-header-bubble {
   display: block;
-  background-color: rgba(57, 210, 201, 0.25);
+  background-color: #2781A2;
   padding: 0 0.5em;
   border-radius: 3px;
-  border: 1px solid rgba(57, 210, 201, 0.2);
+  border: 1px solid #2781A2;
   line-height: 1.1; }
   .section-header-bubble.small {
     font-size: 1.2em; }
@@ -156,3 +156,13 @@ ul {
   .built-with span {
     font-size: 0.7em;
     font-weight: 300; }
+
+.white {
+  color: white; }
+
+.instawork-logo {
+  font-family: 'HelveticaNeue';
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.4px;
+  color: #4eaacc; }
