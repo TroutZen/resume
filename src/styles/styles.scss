@@ -187,6 +187,10 @@ ul {
 	}
 }
 
+.company-section:not(:first-child) {
+	margin-top: 10px;
+}
+
 .company-description {
 	@extend .description;
 	opacity: 0.7;
@@ -244,11 +248,9 @@ ul {
 }
 
 .postmates-logo {
-	display: flex;
+	display: inline-block;
 	flex: auto;
-}
-
-.postmates-img-container {
-	display: inline-flex;
-	max-height: 20px;
+	height: 20px;
+	position: relative;
+	top: 4px;
 }

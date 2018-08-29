@@ -125,6 +125,9 @@ ul {
   .position a {
     color: #7e5ea2; }
 
+.company-section:not(:first-child) {
+  margin-top: 10px; }
+
 .company-description {
   opacity: 0.7;
   font-variant: italic; }
@@ -166,3 +169,10 @@ ul {
   font-weight: bold;
   letter-spacing: -0.4px;
   color: #4eaacc; }
+
+.postmates-logo {
+  display: inline-block;
+  flex: auto;
+  height: 20px;
+  position: relative;
+  top: 4px; }

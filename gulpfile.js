@@ -17,6 +17,10 @@ let paths = {
 	nm: {
 		entry: './node_modules/**/*',
 		out: './public/node_modules'
+	},
+	images: {
+		entry: './src/assets/images/**/*',
+		out: './public/images'
 	}
 }
 
@@ -38,6 +42,10 @@ gulp.task('copy:nm', ()=>{
 	gulp.src(paths.nm.entry).pipe(gulp.dest(paths.nm.out))
 })
 
+gulp.task('copy:images', ()=>{
+	gulp.src(paths.images.entry).pipe(gulp.dest(paths.images.out))
+})
+
 gulp.task('clean', ()=> {
 	return del([
 			'./public/**/*',
@@ -46,7 +54,6 @@ gulp.task('clean', ()=> {
 })
 
 gulp.task('default', ()=>{
-	runSequence('clean', ['copy:html', 'copy:nm', 'sass'], 'watch')
-	// gulp.start('sass', 'watch')
+	runSequence('clean', ['copy:html', 'copy:nm', 'copy:images', 'sass'], 'watch')
 })
 
